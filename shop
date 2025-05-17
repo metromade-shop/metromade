@@ -1,10 +1,11 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Metro Made - A stylish online shop offering Y2K fashion, retro sunglasses, boho accessories, and more. Shop the latest trends!" />
+  <meta name="description"
+    content="Metro Made - A stylish online shop offering Y2K fashion, retro sunglasses, boho accessories, and more. Shop the latest trends!" />
   <title>Metro Made</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter&display=swap" rel="stylesheet" />
   <style>
@@ -12,6 +13,7 @@
     * {
       box-sizing: border-box;
     }
+
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
@@ -19,6 +21,7 @@
       color: #1a1a1a;
       scroll-behavior: smooth;
     }
+
     a {
       text-decoration: none;
       color: inherit;
@@ -36,6 +39,7 @@
       top: 0;
       z-index: 1000;
     }
+
     header .logo {
       display: flex;
       align-items: center;
@@ -45,6 +49,8 @@
       font-weight: 700;
       color: white;
     }
+
+    /* Make sure the logo path is correct, upload it to GitHub */
     header .logo img {
       height: 50px;
       margin-right: 12px;
@@ -56,6 +62,7 @@
       display: flex;
       gap: 1.5rem;
     }
+
     nav a {
       color: white;
       font-weight: 600;
@@ -63,6 +70,7 @@
       border-radius: 4px;
       transition: background-color 0.3s ease;
     }
+
     nav a:hover {
       background-color: #333;
     }
@@ -74,6 +82,7 @@
       cursor: pointer;
       transition: transform 0.3s ease;
     }
+
     .menu-toggle span {
       width: 25px;
       height: 3px;
@@ -82,12 +91,15 @@
       border-radius: 2px;
       transition: 0.3s;
     }
+
     .menu-toggle.open span:nth-child(1) {
       transform: rotate(45deg) translate(5px, 5px);
     }
+
     .menu-toggle.open span:nth-child(2) {
       opacity: 0;
     }
+
     .menu-toggle.open span:nth-child(3) {
       transform: rotate(-45deg) translate(5px, -5px);
     }
@@ -100,11 +112,12 @@
       justify-content: center;
       align-items: center;
       color: white;
-      text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
       text-align: center;
       padding: 0 1rem;
       animation: fadeInDown 1s ease forwards;
     }
+
     .hero h2 {
       font-size: 3rem;
       max-width: 90%;
@@ -120,16 +133,19 @@
       gap: 2rem;
       animation: fadeInUp 1s ease forwards;
     }
+
     .product {
       background-color: white;
       border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       overflow: hidden;
       transition: transform 0.3s ease;
     }
+
     .product:hover {
       transform: scale(1.05);
     }
+
     .product img {
       width: 100%;
       display: block;
@@ -137,14 +153,17 @@
       height: 220px;
       object-fit: cover;
     }
+
     .product-content {
       padding: 1rem;
       text-align: center;
     }
+
     .product-content h3 {
       margin: 0.5rem 0;
       font-size: 1.2rem;
     }
+
     .btn {
       display: inline-block;
       background-color: #111;
@@ -155,6 +174,7 @@
       margin-top: 0.6rem;
       transition: background-color 0.3s ease;
     }
+
     .btn:hover {
       background-color: #444;
     }
@@ -167,12 +187,14 @@
       text-align: center;
       animation: fadeInUp 1.2s ease forwards;
     }
+
     .about h2 {
       font-family: 'Orbitron', sans-serif;
       font-weight: 600;
       font-size: 2.2rem;
       margin-bottom: 1rem;
     }
+
     .about p {
       font-size: 1.1rem;
       line-height: 1.6;
@@ -188,6 +210,7 @@
       padding: 0 1rem;
       animation: fadeInUp 1.4s ease forwards;
     }
+
     .contact h2 {
       text-align: center;
       font-family: 'Orbitron', sans-serif;
@@ -195,16 +218,19 @@
       font-size: 2rem;
       margin-bottom: 1rem;
     }
+
     .contact form {
       display: flex;
       flex-direction: column;
       gap: 1rem;
     }
+
     .contact label {
       font-weight: 600;
       color: #333;
     }
-    .contact input, 
+
+    .contact input,
     .contact textarea {
       padding: 0.6rem 1rem;
       border-radius: 6px;
@@ -212,9 +238,11 @@
       font-size: 1rem;
       resize: vertical;
     }
+
     .contact textarea {
       min-height: 100px;
     }
+
     .contact button {
       background-color: #111;
       color: white;
@@ -226,6 +254,7 @@
       transition: background-color 0.3s ease;
       font-size: 1.1rem;
     }
+
     .contact button:hover {
       background-color: #444;
     }
@@ -239,11 +268,13 @@
       font-size: 0.9rem;
       font-weight: 600;
     }
+
     footer a {
       color: #ffcc70;
       margin: 0 0.6rem;
       transition: color 0.3s ease;
     }
+
     footer a:hover {
       color: #fff;
       text-decoration: underline;
@@ -251,12 +282,27 @@
 
     /* Animations */
     @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px);}
-      to {opacity: 1; transform: translateY(0);}
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
+
     @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-30px);}
-      to {opacity: 1; transform: translateY(0);}
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* Responsive */
@@ -272,21 +318,26 @@
         padding: 1rem;
         width: 150px;
       }
+
       nav.active {
         display: flex;
       }
+
       .menu-toggle {
         display: flex;
       }
+
       .hero h2 {
         font-size: 2.2rem;
       }
+
       .product img {
         height: 200px;
       }
     }
   </style>
 </head>
+
 <body>
   <!-- Header -->
   <header>
@@ -295,9 +346,5 @@
       Metro Made
     </div>
     <nav>
-      <a href="#">Home</a>
-      <a href="#">Shop</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </nav>
-    <div
+      <a href="#">
+
