@@ -1,3 +1,8 @@
+Here's the full HTML, CSS, and JavaScript code combined into one file so you can place everything in a single directory:
+
+### Full HTML, CSS, and JavaScript (All-in-One):
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -287,5 +292,16 @@
   </style>
 </head>
 <body>
-
-
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
+      Metro Made
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+    <div
