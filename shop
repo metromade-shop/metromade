@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Metro Made - A stylish online shop offering Y2K fashion, retro sunglasses, boho accessories, and more. Shop the latest trends!" />
   <title>Metro Made</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter&display=swap" rel="stylesheet" />
   <style>
@@ -70,6 +71,7 @@
       display: none;
       flex-direction: column;
       cursor: pointer;
+      transition: transform 0.3s ease;
     }
     .menu-toggle span {
       width: 25px;
@@ -78,6 +80,15 @@
       margin: 4px 0;
       border-radius: 2px;
       transition: 0.3s;
+    }
+    .menu-toggle.open span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .menu-toggle.open span:nth-child(2) {
+      opacity: 0;
+    }
+    .menu-toggle.open span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
     }
 
     /* Hero */
@@ -266,86 +277,15 @@
       .menu-toggle {
         display: flex;
       }
+      .hero h2 {
+        font-size: 2.2rem;
+      }
+      .product img {
+        height: 200px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="logo">
-      <img src="https://i.postimg.cc/qvHtpk2Z/2-F953-EBE-F741-4-A05-A7-DF-E44-FB7-B4-ED16.png" alt="Metro Made Logo" />
-      METRO MADE
-    </div>
-    <div class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" tabindex="0" role="button">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <nav id="nav-menu">
-      <a href="#products">Products</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <section class="hero">
-    <h2>Y2K Fashion, Accessories & Retro Vibes</h2>
-  </section>
-
-  <section class="products" id="products">
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1618354691382-c8e7c380fdb3" alt="Retro Sunglasses" />
-      <div class="product-content">
-        <h3>Retro Sunglasses</h3>
-        <a class="btn" href="https://depop.com/yourshop" target="_blank" rel="noopener">Shop on Depop</a>
-      </div>
-    </div>
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1572853506254-fbb87c5bfa0d" alt="Boho Chain" />
-      <div class="product-content">
-        <h3>Boho Eyeglass Chain</h3>
-        <a class="btn" href="https://depop.com/yourshop" target="_blank" rel="noopener">Shop on Depop</a>
-      </div>
-    </div>
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1595950653106-6ecdb2ff2202" alt="Y2K Top" />
-      <div class="product-content">
-        <h3>Y2K Crop Top</h3>
-        <a class="btn" href="https://depop.com/yourshop" target="_blank" rel="noopener">Shop on Depop</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="about" id="about">
-    <h2>About Metro Made</h2>
-    <p>
-      Metro Made is your go-to shop for everything Y2K — from stylish retro sunglasses and beaded chains to trendy crop tops, skirts, and accessories. We’re here to bring back that 2000s vibe with a modern twist.
-    </p>
-  </section>
-
-  <section class="contact" id="contact">
-    <h2>Contact Us</h2>
-    <form>
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required>
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
-      <label for="message">Message</label>
-      <textarea id="message" name="message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <footer>
-    &copy; 2025 Metro Made | <a href="#">Instagram</a> | <a href="#">TikTok</a> | <a href="#">Depop</a>
-  </footer>
-
-  <script>
-    const toggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('nav-menu');
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('active');
-    });
-  </script>
-</body>
-</html>
