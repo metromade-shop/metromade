@@ -25,23 +25,22 @@ header {
 }
 
 .logo {
-  /* Center the logo if needed */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .logo img {
-  height: 50px; /* Adjust size if necessary */
+  height: 50px;
   border-radius: 5px;
 }
-
 
 /* Navigation */
 nav {
   display: flex;
-  gap: 2rem;
+  gap: 1rem; /* Reduced gap between links */
 }
+
 nav a {
   color: white;
   text-transform: uppercase;
@@ -51,71 +50,14 @@ nav a {
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
+
 nav a:hover {
   background-color: #333;
 }
 
-/* Reset & base styles */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f0f0f0; /* Soft light gray */
-  color: #333;
-  line-height: 1.6;
-}
-
-/* Header */
-header {
-  background-color: #222; /* Dark background for contrast */
-  color: #fff;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.logo img {
-  height: 50px; /* Adjust size if necessary */
-  border-radius: 5px;
-}
-
-/* Navigation */
-nav {
-  display: flex;
-  gap: 2rem;
-}
-
-nav a {
-  color: #ffcc70; /* Golden accent for links */
-  text-transform: uppercase;
-  font-weight: 600;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-nav a:hover {
-  background-color: #444; /* Darker hover effect */
-}
-
 /* Hero Section */
 .hero {
-  background-color: #b6a0d3; /* Lavender */
+  background-color: #888; /* Mid grey background */
   color: white;
   height: 70vh;
   display: flex;
@@ -173,45 +115,20 @@ nav a:hover {
 }
 
 /* Button Styles */
-/* Existing styles for product buttons */
 .product .btn {
   background-color: #ff4d58;
   color: white;
-  padding: 0.8rem 2rem;
+  padding: 0.7rem 1.5rem;
   text-transform: uppercase;
   font-weight: bold;
   border-radius: 5px;
   text-decoration: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s, transform 0.2s;
-  margin-bottom: 1rem; /* Reduced space between buttons */
+  margin-bottom: 0.5rem; /* Reduced space between buttons */
 }
 
-/* Navigation styles */
-nav a {
-  margin: 0 1rem; /* Reduced gap between menu links */
-}
-
-/* Media Query for Mobile */
-@media (max-width: 768px) {
-  header {
-    position: absolute; /* Remove sticky for small screens */
-    width: 100%;
-    top: 0;
-  }
-
-  /* Adjust nav items for mobile (stack vertically) */
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav a {
-    margin: 0.5rem 0; /* Reduced space between items on mobile */
-  }
-}
-
-.btn:hover {
+.product .btn:hover {
   background-color: #e04e5f; /* Slightly darker neon on hover */
   transform: scale(1.05);
 }
@@ -238,7 +155,7 @@ nav a {
 
 /* Footer */
 footer {
-  background-color: #222; /* Dark background */
+  background-color: #222;
   color: white;
   text-align: center;
   padding: 1rem;
@@ -246,7 +163,7 @@ footer {
 }
 
 footer a {
-  color: #ffcc70; /* Golden accent for links */
+  color: #ffcc70;
   margin: 0 0.5rem;
   text-decoration: none;
   font-weight: bold;
@@ -257,8 +174,27 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Responsive Design */
+/* Mobile Styling */
 @media (max-width: 768px) {
+  header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+  }
+
+  /* Stack the navigation links vertically on mobile */
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    margin: 0.5rem 0; /* Reduced space between items on mobile */
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+  }
+
   .hero h1 {
     font-size: 2.5rem;
   }
@@ -266,157 +202,9 @@ footer a:hover {
   .product img {
     height: 200px;
   }
-
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav a {
-    margin: 0.5rem 0;
-  }
 }
 
-/* Navigation */
-nav {
-  display: flex;
-  justify-content: space-between; /* Space out the items */
-  gap: 2rem;
-  width: 100%;
-}
-
-/* Ensure the nav items are aligned properly */
-nav a {
-  color: white;
-  text-transform: uppercase;
-  font-weight: 600;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  border-radius: 5px;
-  display: inline-block;
-}
-
-/* For mobile screens, make sure the nav links stack vertically */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column; /* Stack the links vertically */
-    align-items: center; /* Center-align the links */
-    gap: 1rem;
-  }
-
-  nav a {
-    padding: 1rem; /* Add space around the links */
-    text-align: center;
-    width: 100%; /* Ensure they take up full width */
-  }
-}
-
-/* Hero Section */
-.hero {
-  background-color: #888; /* Mid grey background */
-  height: 70vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  padding: 0 2rem;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
-}
-
-.hero h1 {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 4rem;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
-
-
-/* Product Section */
-.products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  padding: 3rem;
-  max-width: 1200px;
-  margin: auto;
-}
-.product {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
-.product img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  transition: 0.3s;
-}
-.product:hover img {
-  transform: scale(1.05);
-}
-.product-content {
-  padding: 1.2rem;
-  text-align: center;
-}
-.product-content h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-.btn {
-  background-color: #111;
-  color: white;
-  padding: 0.7rem 1.5rem;
-  text-transform: uppercase;
-  font-weight: bold;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-.btn:hover {
-  background-color: #444;
-}
-
-/* About Section */
-.about {
-  padding: 4rem 2rem;
-  text-align: center;
-  background-color: #f0f0f0;
-}
-.about h2 {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-.about p {
-  font-size: 1.2rem;
-  color: #555;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* Product Hover Effect */
-.product img {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.product:hover img {
-  transform: scale(1.05); /* Enlarge the image */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for effect */
-}
-
-/* Change button color on hover */
-.product:hover .btn {
-  background-color: #ffcc70; /* Change to a highlight color */
-}
-
-/* Change product title on hover */
-.product:hover h3 {
-  color: #ffcc70; /* Change text color to match the button */
-}
+/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
@@ -431,36 +219,3 @@ html {
   background-color: #ffcc70; /* Highlight color on hover */
 }
 
-/* Footer */
-footer {
-  background-color: #111;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-}
-footer a {
-  color: #ffcc70;
-  margin: 0 0.5rem;
-  text-decoration: none;
-  font-weight: bold;
-}
-footer a:hover {
-  color: white;
-  text-decoration: underline;
-}
-
-/* Hide logo from other sections */
-footer .logo, .about .logo, .products .logo {
-  display: none;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-  .product img {
-    height: 200px;
-  }
-}
