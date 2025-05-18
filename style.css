@@ -150,6 +150,29 @@ nav a:hover {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for effect */
 }
 
+/* Change button color on hover */
+.product:hover .btn {
+  background-color: #ffcc70; /* Change to a highlight color */
+}
+
+/* Change product title on hover */
+.product:hover h3 {
+  color: #ffcc70; /* Change text color to match the button */
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Interactive button effect */
+.btn {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.1); /* Slightly enlarge button */
+  background-color: #ffcc70; /* Highlight color on hover */
+}
+
 /* Footer */
 footer {
   background-color: #111;
