@@ -1,167 +1,112 @@
-/* Reset & base styles */
+/* Reset & base */
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
+
 body {
-  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
   background-color: #f8f8f8;
-  color: #333;
-  line-height: 1.6;
+  color: #1a1a1a;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* Header */
 header {
   background-color: #111;
-  color: #fff;
+  color: white;
   padding: 1rem 2rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
-.logo {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 2rem;
+
+header .logo {
+  display: flex;
+  align-items: center;
+  font-family: 'Press Start 2P', cursive; /* Retro font for logo */
   letter-spacing: 2px;
-  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
 }
-.logo img {
+
+header .logo img {
   height: 50px;
-  margin-right: 10px;
-  border-radius: 5px;
+  margin-right: 12px;
+  border-radius: 6px;
+}
+
+/* Hero Section */
+.hero {
+  background: url('https://images.unsplash.com/photo-1606813904811-4e05cfc9d7b7') center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+  text-align: center;
+  padding: 0 1rem;
+  animation: fadeInDown 1s ease forwards;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  max-width: 90%;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px);}
+  to {opacity: 1; transform: translateY(0);}
 }
 
 /* Navigation */
 nav {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
 }
+
 nav a {
   color: white;
-  text-transform: uppercase;
   font-weight: 600;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  border-radius: 5px;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
   transition: background-color 0.3s ease;
 }
+
 nav a:hover {
   background-color: #333;
 }
 
-/* Hero Section */
-.hero {
-  background: url('https://i.imgur.com/JBAZXjx.png') center/cover no-repeat;
-  height: 70vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  padding: 0 2rem;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
-}
-.hero h1 {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 4rem;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
-/* Product Section */
-.products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  padding: 3rem;
-  max-width: 1200px;
-  margin: auto;
-}
-.product {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
-.product img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  transition: 0.3s;
-}
-.product:hover img {
-  transform: scale(1.05);
-}
-.product-content {
-  padding: 1.2rem;
-  text-align: center;
-}
-.product-content h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-.btn {
-  background-color: #111;
-  color: white;
-  padding: 0.7rem 1.5rem;
-  text-transform: uppercase;
-  font-weight: bold;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-.btn:hover {
-  background-color: #444;
-}
-
-/* About Section */
-.about {
-  padding: 4rem 2rem;
-  text-align: center;
-  background-color: #f0f0f0;
-}
-.about h2 {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-.about p {
-  font-size: 1.2rem;
-  color: #555;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* Footer */
-footer {
-  background-color: #111;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-}
-footer a {
-  color: #ffcc70;
-  margin: 0 0.5rem;
-  text-decoration: none;
-  font-weight: bold;
-}
-footer a:hover {
-  color: white;
-  text-decoration: underline;
-}
-
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.5rem;
+  nav {
+    display: none;
+    flex-direction: column;
+    background-color: #111;
+    position: absolute;
+    top: 65px;
+    right: 2rem;
+    border-radius: 6px;
+    padding: 1rem;
+    width: 150px;
   }
-  .product img {
-    height: 200px;
+
+  nav.active {
+    display: flex;
+  }
+
+  .hero h2 {
+    font-size: 2.2rem;
   }
 }
