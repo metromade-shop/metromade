@@ -173,8 +173,9 @@ nav a:hover {
 }
 
 /* Button Styles */
-.btn {
-  background-color: #ff4d58; /* Neon accent color */
+/* Existing styles for product buttons */
+.product .btn {
+  background-color: #ff4d58;
   color: white;
   padding: 0.8rem 2rem;
   text-transform: uppercase;
@@ -183,6 +184,31 @@ nav a:hover {
   text-decoration: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s, transform 0.2s;
+  margin-bottom: 1rem; /* Reduced space between buttons */
+}
+
+/* Navigation styles */
+nav a {
+  margin: 0 1rem; /* Reduced gap between menu links */
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+  header {
+    position: absolute; /* Remove sticky for small screens */
+    width: 100%;
+    top: 0;
+  }
+
+  /* Adjust nav items for mobile (stack vertically) */
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    margin: 0.5rem 0; /* Reduced space between items on mobile */
+  }
 }
 
 .btn:hover {
