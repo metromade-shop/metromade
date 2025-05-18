@@ -156,6 +156,11 @@ footer a:hover {
   text-decoration: underline;
 }
 
+/* Remove logo from footer or other sections */
+footer .logo, .about .logo, .products .logo {
+  display: none;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero h1 {
