@@ -5,292 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Metro Made - A stylish online shop offering Y2K fashion, retro sunglasses, boho accessories, and more. Shop the latest trends!" />
   <title>Metro Made</title>
+  <!-- Link to Google Fonts for custom fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter&display=swap" rel="stylesheet" />
-  <style>
-    /* Reset & base */
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #f8f8f8;
-      color: #1a1a1a;
-      scroll-behavior: smooth;
-    }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* Header */
-    header {
-      background-color: #111;
-      color: white;
-      padding: 1rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    header .logo {
-      display: flex;
-      align-items: center;
-      font-family: 'Orbitron', sans-serif;
-      letter-spacing: 2px;
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: white;
-    }
-    header .logo img {
-      height: 50px;
-      margin-right: 12px;
-      border-radius: 6px;
-    }
-
-    /* Navigation */
-    nav {
-      display: flex;
-      gap: 1.5rem;
-    }
-    nav a {
-      color: white;
-      font-weight: 600;
-      padding: 0.3rem 0.5rem;
-      border-radius: 4px;
-      transition: background-color 0.3s ease;
-    }
-    nav a:hover {
-      background-color: #333;
-    }
-
-    /* Hamburger menu for mobile */
-    .menu-toggle {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-    .menu-toggle span {
-      width: 25px;
-      height: 3px;
-      background-color: white;
-      margin: 4px 0;
-      border-radius: 2px;
-      transition: 0.3s;
-    }
-    .menu-toggle.open span:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
-    }
-    .menu-toggle.open span:nth-child(2) {
-      opacity: 0;
-    }
-    .menu-toggle.open span:nth-child(3) {
-      transform: rotate(-45deg) translate(5px, -5px);
-    }
-
-    /* Hero */
-    .hero {
-      background: url('https://images.unsplash.com/photo-1606813904811-4e05cfc9d7b7') center/cover no-repeat;
-      height: 60vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
-      text-align: center;
-      padding: 0 1rem;
-      animation: fadeInDown 1s ease forwards;
-    }
-    .hero h2 {
-      font-size: 3rem;
-      max-width: 90%;
-    }
-
-    /* Products */
-    .products {
-      max-width: 1200px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
-      animation: fadeInUp 1s ease forwards;
-    }
-    .product {
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      overflow: hidden;
-      transition: transform 0.3s ease;
-    }
-    .product:hover {
-      transform: scale(1.05);
-    }
-    .product img {
-      width: 100%;
-      display: block;
-      border-bottom: 1px solid #eee;
-      height: 220px;
-      object-fit: cover;
-    }
-    .product-content {
-      padding: 1rem;
-      text-align: center;
-    }
-    .product-content h3 {
-      margin: 0.5rem 0;
-      font-size: 1.2rem;
-    }
-    .btn {
-      display: inline-block;
-      background-color: #111;
-      color: white;
-      padding: 0.5rem 1.2rem;
-      border-radius: 5px;
-      font-weight: 600;
-      margin-top: 0.6rem;
-      transition: background-color 0.3s ease;
-    }
-    .btn:hover {
-      background-color: #444;
-    }
-
-    /* About Section */
-    .about {
-      max-width: 900px;
-      margin: 4rem auto;
-      padding: 0 1rem;
-      text-align: center;
-      animation: fadeInUp 1.2s ease forwards;
-    }
-    .about h2 {
-      font-family: 'Orbitron', sans-serif;
-      font-weight: 600;
-      font-size: 2.2rem;
-      margin-bottom: 1rem;
-    }
-    .about p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      color: #444;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    /* Contact Section */
-    .contact {
-      max-width: 500px;
-      margin: 4rem auto 6rem;
-      padding: 0 1rem;
-      animation: fadeInUp 1.4s ease forwards;
-    }
-    .contact h2 {
-      text-align: center;
-      font-family: 'Orbitron', sans-serif;
-      font-weight: 600;
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    .contact form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    .contact label {
-      font-weight: 600;
-      color: #333;
-    }
-    .contact input, 
-    .contact textarea {
-      padding: 0.6rem 1rem;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-      resize: vertical;
-    }
-    .contact textarea {
-      min-height: 100px;
-    }
-    .contact button {
-      background-color: #111;
-      color: white;
-      border: none;
-      padding: 0.8rem 1.5rem;
-      font-weight: 700;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      font-size: 1.1rem;
-    }
-    .contact button:hover {
-      background-color: #444;
-    }
-
-    /* Footer */
-    footer {
-      background-color: #111;
-      color: white;
-      text-align: center;
-      padding: 1.5rem 1rem;
-      font-size: 0.9rem;
-      font-weight: 600;
-    }
-    footer a {
-      color: #ffcc70;
-      margin: 0 0.6rem;
-      transition: color 0.3s ease;
-    }
-    footer a:hover {
-      color: #fff;
-      text-decoration: underline;
-    }
-
-    /* Animations */
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-30px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      nav {
-        display: none;
-        flex-direction: column;
-        background-color: #111;
-        position: absolute;
-        top: 65px;
-        right: 2rem;
-        border-radius: 6px;
-        padding: 1rem;
-        width: 150px;
-      }
-      nav.active {
-        display: flex;
-      }
-      .menu-toggle {
-        display: flex;
-      }
-      .hero h2 {
-        font-size: 2.2rem;
-      }
-      .product img {
-        height: 200px;
-      }
-    }
-  </style>
+  
+  <!-- Link to your CSS file (style.css) -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <!-- Header -->
   <header>
     <div class="logo">
-      <img src="https://i.imgur.com/JBAZXjx.png" alt="Metro Made Logo">
+      <img src="https://i.imgur.com/JBAZXjx.png" alt="Logo">
       Metro Made
     </div>
     <nav>
@@ -299,4 +24,51 @@
       <a href="#">About</a>
       <a href="#">Contact</a>
     </nav>
-    <div class="menu-toggle">
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h2>Shop the Latest Y2K Fashion</h2>
+  </div>
+
+  <!-- Products Section -->
+  <div class="products">
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1606813904811-4e05cfc9d7b7" alt="Product Image">
+      <div class="product-content">
+        <h3>Retro Sunglasses</h3>
+        <a href="#" class="btn">Shop Now</a>
+      </div>
+    </div>
+    <!-- Add more product blocks as needed -->
+  </div>
+
+  <!-- About Section -->
+  <div class="about">
+    <h2>About Metro Made</h2>
+    <p>Your go-to place for Y2K fashion, retro accessories, and more. Embrace nostalgia and shop the latest trends!</p>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Metro Made | All rights reserved.</p>
+  </footer>
+</body>
+</html>
