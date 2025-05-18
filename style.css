@@ -64,13 +64,16 @@ nav a:hover {
   color: white;
   padding: 0 2rem;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+  position: relative;  /* Ensure proper stacking context */
 }
 .hero h1 {
   font-family: 'Press Start 2P', cursive;
   font-size: 4rem;
   text-transform: uppercase;
   letter-spacing: 3px;
+  z-index: 10;  /* Ensure text stays above background */
 }
+
 
 /* Product Section */
 .products {
