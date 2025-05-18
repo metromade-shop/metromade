@@ -156,7 +156,7 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Remove logo from footer or other sections */
+/* Hide logo from other sections */
 footer .logo, .about .logo, .products .logo {
   display: none;
 }
