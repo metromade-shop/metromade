@@ -1,145 +1,40 @@
-/* Reset & base */
-* {
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Metro Made - A stylish online shop offering Y2K fashion, retro sunglasses, boho accessories, and more. Shop the latest trends!" />
+  <title>Metro Made</title>
+  <!-- External fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter&display=swap" rel="stylesheet" />
+  
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="logo">
+      <img src="https://i.imgur.com/JBAZXjx.png" alt="Logo">
+      <span>Metro Made</span>
+    </div>
+  </header>
 
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background-color: #f8f8f8;
-  color: #1a1a1a;
-  scroll-behavior: smooth;
-}
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Welcome to Metro Made!</h2>
+  </section>
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
+  <!-- Navigation (example) -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Shop</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
 
-/* Header */
-header {
-  background-color: #111;
-  color: white;
-  padding: 1rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-header .logo {
-  display: flex;
-  align-items: center;
-  font-family: 'Orbitron', sans-serif;
-  letter-spacing: 2px;
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: white;
-}
-
-header .logo img {
-  height: 50px;
-  margin-right: 12px;
-  border-radius: 6px;
-}
-
-/* Navigation */
-nav {
-  display: flex;
-  gap: 1.5rem;
-}
-
-nav a {
-  color: white;
-  font-weight: 600;
-  padding: 0.3rem 0.5rem;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-}
-
-nav a:hover {
-  background-color: #333;
-}
-
-/* Hamburger menu for mobile */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.menu-toggle span {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  margin: 4px 0;
-  border-radius: 2px;
-  transition: 0.3s;
-}
-
-.menu-toggle.open span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.menu-toggle.open span:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-toggle.open span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
-
-/* Hero */
-.hero {
-  background: url('https://images.unsplash.com/photo-1606813904811-4e05cfc9d7b7') center/cover no-repeat;
-  height: 60vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
-  text-align: center;
-  padding: 0 1rem;
-  animation: fadeInDown 1s ease forwards;
-}
-
-.hero h2 {
-  font-size: 3rem;
-  max-width: 90%;
-}
-
-/* Animations */
-@keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(-30px);}
-  to { opacity: 1; transform: translateY(0);}
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  nav {
-    display: none;
-    flex-direction: column;
-    background-color: #111;
-    position: absolute;
-    top: 70px;
-    right: 2rem;
-    border-radius: 6px;
-    padding: 1rem;
-    width: 150px;
-  }
-
-  nav.active {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: flex;
-  }
-
-  .hero h2 {
-    font-size: 2.2rem;
-  }
-}
+  <!-- Link to JS -->
+  <script src="script.js"></script>
+</body>
+</html>
