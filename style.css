@@ -55,7 +55,7 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-  background: url('https://i.imgur.com/JBAZXjx.png') center/cover no-repeat;
+  background-color: #888; /* Mid grey background */
   height: 70vh;
   display: flex;
   justify-content: center;
@@ -64,7 +64,15 @@ nav a:hover {
   color: white;
   padding: 0 2rem;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
-  position: relative;  /* Ensure proper stacking context */
+}
+
+.hero h1 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
 }
 .hero h1 {
   font-family: 'Press Start 2P', cursive;
