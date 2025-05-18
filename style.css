@@ -1,22 +1,18 @@
-/* Reset & base */
+/* General Reset */
 * {
   box-sizing: border-box;
-}
-
-body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
-  background-color: #f8f8f8;
-  color: #1a1a1a;
-  scroll-behavior: smooth;
+  padding: 0;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+/* Body and Font Style */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
-/* Header */
+/* Header Styling */
 header {
   background-color: #111;
   color: white;
@@ -30,13 +26,10 @@ header {
 }
 
 header .logo {
-  display: flex;
-  align-items: center;
-  font-family: 'Press Start 2P', cursive; /* Retro font for logo */
-  letter-spacing: 2px;
   font-size: 1.8rem;
   font-weight: 700;
-  color: white;
+  display: flex;
+  align-items: center;
 }
 
 header .logo img {
@@ -47,66 +40,72 @@ header .logo img {
 
 /* Hero Section */
 .hero {
-  background: url('https://images.unsplash.com/photo-1606813904811-4e05cfc9d7b7') center/cover no-repeat;
+  background: url('your_hero_image_url.jpg') center/cover no-repeat;
   height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
   text-align: center;
   padding: 0 1rem;
-  animation: fadeInDown 1s ease forwards;
 }
 
 .hero h2 {
   font-size: 3rem;
-  max-width: 90%;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
 }
 
-/* Animations */
-@keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(-30px);}
-  to {opacity: 1; transform: translateY(0);}
+/* Product Grid */
+.products {
+  max-width: 1200px;
+  margin: 3rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
 }
 
-/* Navigation */
-nav {
-  display: flex;
-  gap: 1.5rem;
+.product {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-nav a {
+.product img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.product-content {
+  padding: 1rem;
+  text-align: center;
+}
+
+.product-content h3 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background-color: #111;
   color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
   font-weight: 600;
-  padding: 0.3rem 0.5rem;
-  border-radius: 4px;
+  margin-top: 0.6rem;
   transition: background-color 0.3s ease;
 }
 
-nav a:hover {
-  background-color: #333;
+.btn:hover {
+  background-color: #444;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  nav {
-    display: none;
-    flex-direction: column;
-    background-color: #111;
-    position: absolute;
-    top: 65px;
-    right: 2rem;
-    border-radius: 6px;
-    padding: 1rem;
-    width: 150px;
-  }
-
-  nav.active {
-    display: flex;
-  }
-
-  .hero h2 {
-    font-size: 2.2rem;
-  }
+/* Footer */
+footer {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
 }
